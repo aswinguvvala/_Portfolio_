@@ -1,0 +1,129 @@
+<svg width="400" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2a5298;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neuralGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.4" />
+    </linearGradient>
+    <radialGradient id="attentionGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#1e3c72;stop-opacity:0.1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="240" fill="url(#techGradient)"/>
+  
+  <!-- Transformer Architecture Layers -->
+  <g opacity="0.7">
+    <!-- Input Embedding Layer -->
+    <g transform="translate(50, 180)">
+      <rect x="0" y="0" width="300" height="8" fill="#60a5fa" opacity="0.6" rx="4"/>
+      <text x="150" y="20" text-anchor="middle" fill="#60a5fa" font-family="Arial, sans-serif" font-size="8">Input Embedding</text>
+    </g>
+    
+    <!-- Multi-Head Attention Layers -->
+    <g transform="translate(70, 140)">
+      <rect x="0" y="0" width="260" height="12" fill="#a855f7" opacity="0.5" rx="6"/>
+      <text x="130" y="25" text-anchor="middle" fill="#a855f7" font-family="Arial, sans-serif" font-size="8">Multi-Head Attention</text>
+      
+      <!-- Attention heads -->
+      <g opacity="0.8">
+        <circle cx="40" cy="6" r="3" fill="#a855f7" filter="url(#glow)"/>
+        <circle cx="80" cy="6" r="3" fill="#ec4899" filter="url(#glow)"/>
+        <circle cx="120" cy="6" r="3" fill="#60a5fa" filter="url(#glow)"/>
+        <circle cx="160" cy="6" r="3" fill="#a855f7" filter="url(#glow)"/>
+        <circle cx="200" cy="6" r="3" fill="#ec4899" filter="url(#glow)"/>
+        <circle cx="240" cy="6" r="3" fill="#60a5fa" filter="url(#glow)"/>
+      </g>
+    </g>
+    
+    <!-- Feed Forward Layer -->
+    <g transform="translate(90, 100)">
+      <rect x="0" y="0" width="220" height="10" fill="#ec4899" opacity="0.5" rx="5"/>
+      <text x="110" y="22" text-anchor="middle" fill="#ec4899" font-family="Arial, sans-serif" font-size="8">Feed Forward</text>
+    </g>
+    
+    <!-- Output Layer -->
+    <g transform="translate(110, 60)">
+      <rect x="0" y="0" width="180" height="8" fill="#60a5fa" opacity="0.6" rx="4"/>
+      <text x="90" y="20" text-anchor="middle" fill="#60a5fa" font-family="Arial, sans-serif" font-size="8">Output Probabilities</text>
+    </g>
+  </g>
+  
+  <!-- Central Attention Mechanism -->
+  <g transform="translate(200, 120)">
+    <circle cx="0" cy="0" r="30" fill="url(#attentionGrad)" stroke="url(#neuralGlow)" stroke-width="2" filter="url(#glow)"/>
+    
+    <!-- Attention weights visualization -->
+    <g opacity="0.8">
+      <line x1="-20" y1="-20" x2="20" y2="20" stroke="#a855f7" stroke-width="2" opacity="0.6"/>
+      <line x1="20" y1="-20" x2="-20" y2="20" stroke="#ec4899" stroke-width="2" opacity="0.4"/>
+      <line x1="-25" y1="0" x2="25" y2="0" stroke="#60a5fa" stroke-width="2" opacity="0.7"/>
+      <line x1="0" y1="-25" x2="0" y2="25" stroke="#a855f7" stroke-width="2" opacity="0.5"/>
+      
+      <!-- Central attention node -->
+      <circle cx="0" cy="0" r="6" fill="#ffffff" opacity="0.9"/>
+      <text x="0" y="2" text-anchor="middle" fill="#1e3c72" font-family="Arial, sans-serif" font-size="6" font-weight="bold">ATT</text>
+    </g>
+  </g>
+  
+  <!-- Token Flow -->
+  <g opacity="0.6">
+    <!-- Input tokens -->
+    <g transform="translate(30, 200)">
+      <rect x="0" y="0" width="15" height="6" fill="#60a5fa" rx="3"/>
+      <rect x="20" y="0" width="15" height="6" fill="#a855f7" rx="3"/>
+      <rect x="40" y="0" width="15" height="6" fill="#ec4899" rx="3"/>
+      <text x="27" y="-5" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="6">Tokens</text>
+    </g>
+    
+    <!-- Flow arrows -->
+    <g>
+      <path d="M 150 210 L 150 195 L 155 200 L 150 205 L 145 200 L 150 195" fill="#60a5fa" opacity="0.7"/>
+      <path d="M 200 160 L 200 145 L 205 150 L 200 155 L 195 150 L 200 145" fill="#a855f7" opacity="0.7"/>
+      <path d="M 250 120 L 250 105 L 255 110 L 250 115 L 245 110 L 250 105" fill="#ec4899" opacity="0.7"/>
+    </g>
+  </g>
+  
+  <!-- Neural Network Connections -->
+  <g opacity="0.3">
+    <line x1="50" y1="50" x2="100" y2="80" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="100" y1="50" x2="150" y2="80" stroke="#a855f7" stroke-width="1"/>
+    <line x1="150" y1="50" x2="200" y2="80" stroke="#ec4899" stroke-width="1"/>
+    <line x1="250" y1="50" x2="300" y2="80" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="300" y1="50" x2="350" y2="80" stroke="#a855f7" stroke-width="1"/>
+  </g>
+  
+  <!-- Parameters indicator -->
+  <g transform="translate(320, 40)" opacity="0.6">
+    <text x="0" y="0" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">117M</text>
+    <text x="0" y="12" fill="white" font-family="Arial, sans-serif" font-size="6">Parameters</text>
+  </g>
+  
+  <!-- Research paper elements -->
+  <g transform="translate(30, 40)" opacity="0.4">
+    <rect x="0" y="0" width="25" height="30" fill="none" stroke="white" stroke-width="1" rx="2"/>
+    <line x1="3" y1="5" x2="22" y2="5" stroke="white" stroke-width="0.5"/>
+    <line x1="3" y1="8" x2="18" y2="8" stroke="white" stroke-width="0.5"/>
+    <line x1="3" y1="11" x2="20" y2="11" stroke="white" stroke-width="0.5"/>
+    <line x1="3" y1="14" x2="15" y2="14" stroke="white" stroke-width="0.5"/>
+    <text x="12" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="5">Paper</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold" filter="url(#glow)">GPT-2 Demo</text>
+  <text x="200" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.8">Transformer Language Model</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pandasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#150458;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E3192;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Pandas logo simplified -->
+  <g transform="translate(2, 2)">
+    <!-- Panda-like representation with data blocks -->
+    <g opacity="0.8">
+      <!-- Head -->
+      <circle cx="10" cy="6" r="4" fill="white" stroke="url(#pandasGrad)" stroke-width="1.5"/>
+      
+      <!-- Eyes -->
+      <circle cx="8" cy="5" r="1" fill="url(#pandasGrad)"/>
+      <circle cx="12" cy="5" r="1" fill="url(#pandasGrad)"/>
+      
+      <!-- Nose -->
+      <circle cx="10" cy="7" r="0.5" fill="url(#pandasGrad)"/>
+    </g>
+    
+    <!-- Data representation -->
+    <g opacity="0.6">
+      <rect x="4" y="12" width="3" height="2" fill="url(#pandasGrad)" rx="0.5"/>
+      <rect x="8" y="12" width="3" height="2" fill="url(#pandasGrad)" rx="0.5"/>
+      <rect x="12" y="12" width="3" height="2" fill="url(#pandasGrad)" rx="0.5"/>
+      
+      <rect x="4" y="15" width="3" height="2" fill="url(#pandasGrad)" rx="0.5" opacity="0.7"/>
+      <rect x="8" y="15" width="3" height="2" fill="url(#pandasGrad)" rx="0.5" opacity="0.7"/>
+      <rect x="12" y="15" width="3" height="2" fill="url(#pandasGrad)" rx="0.5" opacity="0.7"/>
+    </g>
+  </g>
+</svg>

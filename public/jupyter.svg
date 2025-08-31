@@ -1,0 +1,29 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="jupyterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F37626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F15A24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Jupyter logo simplified -->
+  <g transform="translate(2, 2)">
+    <!-- Planet/orbit representation -->
+    <circle cx="10" cy="10" r="8" fill="none" stroke="url(#jupyterGrad)" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- Three main moons/satellites representing Julia, Python, R -->
+    <circle cx="10" cy="3" r="2" fill="url(#jupyterGrad)" opacity="0.8"/>
+    <circle cx="17" cy="10" r="2" fill="#767676" opacity="0.8"/>  <!-- Gray for other languages -->
+    <circle cx="3" cy="10" r="2" fill="#306998" opacity="0.8"/>  <!-- Python blue -->
+    
+    <!-- Central hub -->
+    <circle cx="10" cy="10" r="3" fill="url(#jupyterGrad)" opacity="0.4"/>
+    
+    <!-- Notebook representation -->
+    <g opacity="0.6">
+      <rect x="6" y="8" width="8" height="1" fill="url(#jupyterGrad)" rx="0.5"/>
+      <rect x="6" y="10" width="6" height="1" fill="url(#jupyterGrad)" rx="0.5"/>
+      <rect x="6" y="12" width="7" height="1" fill="url(#jupyterGrad)" rx="0.5"/>
+    </g>
+  </g>
+</svg>

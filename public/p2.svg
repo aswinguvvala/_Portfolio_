@@ -1,0 +1,109 @@
+<svg width="400" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="modernGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="promptGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#CBACF9;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#E2CBFF;stop-opacity:0.4" />
+    </linearGradient>
+    <radialGradient id="aiCore" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#CBACF9;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="240" fill="url(#modernGradient)"/>
+  
+  <!-- AI Model Nodes -->
+  <g opacity="0.7">
+    <!-- GPT-4 -->
+    <circle cx="80" cy="60" r="15" fill="#00D4FF" opacity="0.6" filter="url(#glow)"/>
+    <text x="80" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">GPT-4</text>
+    
+    <!-- Claude -->
+    <circle cx="320" cy="60" r="15" fill="#CBACF9" opacity="0.6" filter="url(#glow)"/>
+    <text x="320" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Claude</text>
+    
+    <!-- Gemini -->
+    <circle cx="80" cy="180" r="15" fill="#E2CBFF" opacity="0.6" filter="url(#glow)"/>
+    <text x="80" y="165" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Gemini</text>
+    
+    <!-- Grok -->
+    <circle cx="320" cy="180" r="15" fill="#f093fb" opacity="0.6" filter="url(#glow)"/>
+    <text x="320" y="165" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">Grok</text>
+  </g>
+  
+  <!-- Central Processing Hub -->
+  <g transform="translate(200, 120)">
+    <circle cx="0" cy="0" r="35" fill="url(#aiCore)" stroke="url(#promptGlow)" stroke-width="2" filter="url(#glow)"/>
+    
+    <!-- Prompt Enhancement Symbol -->
+    <g opacity="0.8">
+      <!-- Input prompt -->
+      <rect x="-25" y="-15" width="20" height="8" fill="none" stroke="#00D4FF" stroke-width="1.5" rx="2"/>
+      <text x="-15" y="-9" text-anchor="middle" fill="#00D4FF" font-family="Arial, sans-serif" font-size="6">Input</text>
+      
+      <!-- Enhancement arrows -->
+      <path d="M -3 -11 L 3 -11 L 3 -8 L 8 -11.5 L 3 -15 L 3 -12 L -3 -12 Z" fill="#CBACF9" opacity="0.7"/>
+      <path d="M -3 11 L 3 11 L 3 8 L 8 11.5 L 3 15 L 3 12 L -3 12 Z" fill="#CBACF9" opacity="0.7"/>
+      
+      <!-- Enhanced output -->
+      <rect x="10" y="-15" width="20" height="30" fill="none" stroke="#E2CBFF" stroke-width="1.5" rx="2"/>
+      <text x="20" y="-5" text-anchor="middle" fill="#E2CBFF" font-family="Arial, sans-serif" font-size="5">Enhanced</text>
+      <text x="20" y="5" text-anchor="middle" fill="#E2CBFF" font-family="Arial, sans-serif" font-size="5">Output</text>
+    </g>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g opacity="0.4">
+    <line x1="95" y1="60" x2="165" y2="120" stroke="#00D4FF" stroke-width="2"/>
+    <line x1="305" y1="60" x2="235" y2="120" stroke="#CBACF9" stroke-width="2"/>
+    <line x1="95" y1="180" x2="165" y2="120" stroke="#E2CBFF" stroke-width="2"/>
+    <line x1="305" y1="180" x2="235" y2="120" stroke="#f093fb" stroke-width="2"/>
+  </g>
+  
+  <!-- Floating Enhancement Indicators -->
+  <g opacity="0.6">
+    <!-- Magic wand effect -->
+    <g transform="translate(150, 80) rotate(15)">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#CBACF9" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="22" cy="0" r="2" fill="#CBACF9"/>
+      <circle cx="18" cy="0" r="1" fill="#E2CBFF"/>
+    </g>
+    
+    <!-- Sparkle effects -->
+    <g transform="translate(250, 80)">
+      <path d="M 0 -6 L 2 -2 L 6 0 L 2 2 L 0 6 L -2 2 L -6 0 L -2 -2 Z" fill="#00D4FF" opacity="0.8"/>
+    </g>
+    <g transform="translate(120, 140)">
+      <path d="M 0 -4 L 1.5 -1.5 L 4 0 L 1.5 1.5 L 0 4 L -1.5 1.5 L -4 0 L -1.5 -1.5 Z" fill="#E2CBFF" opacity="0.6"/>
+    </g>
+    <g transform="translate(280, 140)">
+      <path d="M 0 -5 L 1.8 -1.8 L 5 0 L 1.8 1.8 L 0 5 L -1.8 1.8 L -5 0 L -1.8 -1.8 Z" fill="#f093fb" opacity="0.7"/>
+    </g>
+  </g>
+  
+  <!-- Quality Indicators -->
+  <g transform="translate(340, 100)" opacity="0.5">
+    <rect x="0" y="0" width="15" height="3" fill="#00D4FF" rx="1"/>
+    <rect x="0" y="5" width="12" height="3" fill="#CBACF9" rx="1"/>
+    <rect x="0" y="10" width="18" height="3" fill="#E2CBFF" rx="1"/>
+    <text x="20" y="8" fill="white" font-family="Arial, sans-serif" font-size="6">Quality</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold" filter="url(#glow)">PromptCraft</text>
+  <text x="200" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.8">AI Prompt Enhancement Studio</text>
+</svg>

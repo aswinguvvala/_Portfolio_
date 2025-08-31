@@ -1,0 +1,34 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="plotlyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3F4F75;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00D4AA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Plotly chart representation -->
+  <g transform="translate(2, 2)">
+    <!-- Chart area -->
+    <rect x="2" y="2" width="16" height="16" fill="none" stroke="url(#plotlyGrad)" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Data visualization -->
+    <g opacity="0.8">
+      <!-- Line chart -->
+      <path d="M 4 14 L 6 10 L 8 12 L 10 8 L 12 6 L 14 9 L 16 4" 
+            fill="none" stroke="url(#plotlyGrad)" stroke-width="2" stroke-linecap="round"/>
+      
+      <!-- Data points -->
+      <circle cx="4" cy="14" r="1.5" fill="url(#plotlyGrad)"/>
+      <circle cx="6" cy="10" r="1.5" fill="url(#plotlyGrad)"/>
+      <circle cx="8" cy="12" r="1.5" fill="url(#plotlyGrad)"/>
+      <circle cx="10" cy="8" r="1.5" fill="url(#plotlyGrad)"/>
+      <circle cx="12" cy="6" r="1.5" fill="url(#plotlyGrad)"/>
+      <circle cx="14" cy="9" r="1.5" fill="url(#plotlyGrad)"/>
+      <circle cx="16" cy="4" r="1.5" fill="url(#plotlyGrad)"/>
+    </g>
+    
+    <!-- Axes -->
+    <line x1="2" y1="18" x2="18" y2="18" stroke="url(#plotlyGrad)" stroke-width="1" opacity="0.6"/>
+    <line x1="2" y1="18" x2="2" y2="2" stroke="url(#plotlyGrad)" stroke-width="1" opacity="0.6"/>
+  </g>
+</svg>

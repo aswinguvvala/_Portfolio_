@@ -1,0 +1,33 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dockerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2496ED;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0DB7ED;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Docker whale simplified -->
+  <g transform="translate(2, 2)">
+    <!-- Container blocks -->
+    <g opacity="0.8">
+      <rect x="2" y="8" width="3" height="3" fill="url(#dockerGrad)" rx="0.5"/>
+      <rect x="6" y="8" width="3" height="3" fill="url(#dockerGrad)" rx="0.5"/>
+      <rect x="10" y="8" width="3" height="3" fill="url(#dockerGrad)" rx="0.5"/>
+      
+      <rect x="6" y="4" width="3" height="3" fill="url(#dockerGrad)" rx="0.5"/>
+      <rect x="10" y="4" width="3" height="3" fill="url(#dockerGrad)" rx="0.5"/>
+      
+      <rect x="10" y="0" width="3" height="3" fill="url(#dockerGrad)" rx="0.5"/>
+    </g>
+    
+    <!-- Whale body -->
+    <ellipse cx="10" cy="14" rx="8" ry="3" fill="url(#dockerGrad)" opacity="0.6"/>
+    
+    <!-- Whale spout -->
+    <g opacity="0.7">
+      <circle cx="4" cy="12" r="1" fill="url(#dockerGrad)"/>
+      <circle cx="3" cy="10" r="0.5" fill="url(#dockerGrad)"/>
+      <circle cx="5" cy="10" r="0.5" fill="url(#dockerGrad)"/>
+    </g>
+  </g>
+</svg>
