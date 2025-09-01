@@ -19,10 +19,10 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/data": ["../data"],
-      "@/data/*": ["../data/*"]
+      "@/data": ["./data"],
+      "@/data/*": ["./data/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "../data/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./data/**/*.ts"],
   "exclude": ["node_modules"]
 }
