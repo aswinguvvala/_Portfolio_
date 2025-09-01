@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 // import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { projects } from "@/data";
+import Image from "next/image";
 
 interface Project {
   id: number;
@@ -29,9 +30,11 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 
         <div className="relative mb-6 overflow-hidden rounded-xl">
           <div className="relative">
-            <img
+            <Image
               src={project.img}
               alt={project.title}
+              width={600}
+              height={400}
               className="w-full h-48 object-cover"
             />
             

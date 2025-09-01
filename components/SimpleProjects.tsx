@@ -1,6 +1,7 @@
 "use client";
 
 import { projects } from "@/data";
+import Image from "next/image";
 
 const SimpleProjects = () => {
   return (
@@ -16,9 +17,11 @@ const SimpleProjects = () => {
             className="bg-black-100 border border-white/[0.1] rounded-xl p-6 hover:border-purple/50 transition-all duration-300 hover:-translate-y-2"
           >
             <div className="mb-6">
-              <img
+              <Image
                 src={item.img}
                 alt={item.title}
+                width={400}
+                height={192}
                 className="w-full h-48 object-cover rounded-lg bg-gray-800"
               />
             </div>
@@ -38,7 +41,7 @@ const SimpleProjects = () => {
                     key={index}
                     className="border border-white/[0.2] rounded-full bg-black w-10 h-10 flex justify-center items-center"
                   >
-                    <img src={icon} alt="tech-icon" className="p-2" />
+                    <Image src={icon} alt="tech-icon" width={24} height={24} className="p-2" />
                   </div>
                 ))}
               </div>
