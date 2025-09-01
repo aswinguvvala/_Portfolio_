@@ -224,16 +224,11 @@ export const navItems = [
   export const socialMedia = [
     {
       id: 1,
-      img: "/git.svg",
-      link: "https://github.com/aswinguvvala",
-    },
-    {
-      id: 2,
       img: "/link.svg",
       link: "https://www.linkedin.com/in/aswinguvvala",
     },
     {
-      id: 3,
+      id: 2,
       img: "/mail.svg",
       link: "mailto:aswinabd17@gmail.com",
     },
