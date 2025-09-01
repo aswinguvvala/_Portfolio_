@@ -1,10 +1,16 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaPython, FaAws, FaDatabase, FaChartBar, FaBrain, FaRobot, FaCode, FaChartLine } from "react-icons/fa";
+import { FaPython, FaAws, FaDatabase, FaChartBar, FaChartLine } from "react-icons/fa";
 import { SiTensorflow, SiPytorch, SiScikitlearn, SiPandas, SiNumpy, SiJupyter, SiTableau, SiKeras, SiOpencv, SiOpenai, SiStreamlit, SiPlotly } from "react-icons/si";
 import { TbMathFunction } from "react-icons/tb";
+
+// Define emoji-based skill icons
+const EmojiIcon = ({ emoji, size = 32 }: { emoji: string; size?: number }) => (
+  <span style={{ fontSize: size }} className="select-none">{emoji}</span>
+);
 
 const skillCategories = [
   {
@@ -28,20 +34,20 @@ const skillCategories = [
   {
     title: "Natural Language Processing",
     skills: [
-      { name: "Hugging Face", icon: FaBrain, color: "#FFD21E" },
-      { name: "BERT", icon: FaBrain, color: "#4285F4" },
-      { name: "Transformers", icon: FaRobot, color: "#FF6B6B" },
-      { name: "NLTK", icon: FaCode, color: "#2E8B57" },
-      { name: "spaCy", icon: FaCode, color: "#09A3D5" },
+      { name: "Hugging Face", icon: () => <EmojiIcon emoji="🤗" />, color: "#FFD21E" },
+      { name: "BERT", icon: () => <EmojiIcon emoji="🇬" />, color: "#4285F4" },
+      { name: "Transformers", icon: () => <EmojiIcon emoji="🇬" />, color: "#FF6B6B" },
+      { name: "NLTK", icon: () => <EmojiIcon emoji="📝" />, color: "#2E8B57" },
+      { name: "spaCy", icon: () => <EmojiIcon emoji="🌌" />, color: "#09A3D5" },
     ]
   },
   {
     title: "Generative AI",
     skills: [
       { name: "OpenAI GPT-4", icon: SiOpenai, color: "#412991" },
-      { name: "LLaMA", icon: FaRobot, color: "#FF4081" },
-      { name: "RAG Systems", icon: FaBrain, color: "#9C27B0" },
-      { name: "Prompt Engineering", icon: FaCode, color: "#FF5722" },
+      { name: "LLaMA", icon: () => <EmojiIcon emoji="∞" />, color: "#FF4081" },
+      { name: "RAG Systems", icon: () => <EmojiIcon emoji="🦜" />, color: "#9C27B0" },
+      { name: "Prompt Engineering", icon: () => <EmojiIcon emoji="💬" />, color: "#FF5722" },
       { name: "Fine-tuning", icon: TbMathFunction, color: "#607D8B" },
     ]
   },
@@ -51,7 +57,7 @@ const skillCategories = [
       { name: "Pandas", icon: SiPandas, color: "#150458" },
       { name: "NumPy", icon: SiNumpy, color: "#013243" },
       { name: "Statistical Modeling", icon: TbMathFunction, color: "#795548" },
-      { name: "A/B Testing", icon: FaChartLine, color: "#FF9800" },
+      { name: "A/B Testing", icon: () => <EmojiIcon emoji="⚖️" />, color: "#FF9800" },
       { name: "Time Series", icon: FaChartLine, color: "#3F51B5" },
     ]
   },
@@ -71,7 +77,7 @@ const skillCategories = [
 
 interface Skill {
   name: string;
-  icon: React.ComponentType<{ size?: number; color?: string }>;
+  icon: React.ComponentType<{ size?: number; color?: string }> | (() => JSX.Element);
   color: string;
 }
 
@@ -92,7 +98,11 @@ const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => {
       <div className="bg-gradient-to-br from-black-100 to-black-200 border border-white/[0.1] rounded-xl p-6 hover:border-purple/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple/25 h-full">
         {/* Icon */}
         <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple/20 to-cyan-500/20 group-hover:scale-110 transition-transform duration-300">
-          <skill.icon size={32} color={skill.color} />
+          {typeof skill.icon === 'function' && skill.icon.name === '' ? (
+            <skill.icon />
+          ) : (
+            React.createElement(skill.icon as React.ComponentType<{size: number; color: string}>, { size: 32, color: skill.color })
+          )}
         </div>
 
         {/* Skill Name */}

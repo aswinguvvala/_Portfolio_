@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+// import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { projects } from "@/data";
 
 interface Project {
@@ -66,51 +66,36 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           </p>
 
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              {project.iconLists.map((icon: string, iconIndex: number) => (
-                <div
-                  key={iconIndex}
-                  className="w-10 h-10 rounded-full bg-black border border-white/[0.2] flex items-center justify-center group-hover:border-purple/50 transition-colors duration-300"
-                >
-                  <img src={icon} alt="tech-icon" className="w-5 h-5" />
-                </div>
-              ))}
+            <div className="flex flex-wrap gap-2">
+              {project.iconLists.map((icon: string, iconIndex: number) => {
+                // Convert icon path to technology name
+                const techName = icon.split('/')[1]?.split('.')[0] || '';
+                const displayName = {
+                  'python': 'Python',
+                  'openai': 'OpenAI',
+                  'aws': 'AWS',
+                  'fastapi': 'FastAPI',
+                  'vector-db': 'Vector DB',
+                  'streamlit': 'Streamlit',
+                  'ai': 'AI',
+                  'gemini': 'Gemini',
+                  'pandas': 'Pandas',
+                  'plotly': 'Plotly',
+                  'docker': 'Docker'
+                }[techName] || techName;
+                
+                return (
+                  <span
+                    key={iconIndex}
+                    className="px-2 py-1 text-xs bg-black border border-white/[0.2] rounded-md text-gray-300 group-hover:border-purple/50 group-hover:text-white transition-colors duration-300"
+                  >
+                    {displayName}
+                  </span>
+                );
+              })}
             </div>
 
-            <div className="flex items-center space-x-3">
-              {project.link !== "#" ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-purple hover:text-purple/80 transition-colors duration-200"
-                >
-                  <span className="text-sm font-medium mr-2">
-                    {project.github ? "Live Demo" : "Live Site"}
-                  </span>
-                  <FaExternalLinkAlt className="w-4 h-4" />
-                </a>
-              ) : (
-                <div className="flex items-center text-gray-500 cursor-not-allowed">
-                  <span className="text-sm font-medium mr-2">
-                    Coming Soon
-                  </span>
-                  <FaExternalLinkAlt className="w-4 h-4" />
-                </div>
-              )}
-              
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-cyan-500 hover:text-cyan-400 transition-colors duration-200"
-                >
-                  <span className="text-sm font-medium mr-2">GitHub</span>
-                  <FaGithub className="w-4 h-4" />
-                </a>
-              )}
-            </div>
+
           </div>
         </div>
 

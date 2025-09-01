@@ -97,6 +97,7 @@ export const navItems = [
       img: "/p1.svg",
       iconLists: ["/python.svg", "/openai.svg", "/aws.svg", "/fastapi.svg", "/vector-db.svg"],
       link: "http://18.117.163.37:8501",
+      github: "https://github.com/yourusername/cosmorag",
     },
     {
       id: 2,
@@ -105,6 +106,7 @@ export const navItems = [
       img: "/p2.svg",
       iconLists: ["/streamlit.svg", "/python.svg", "/openai.svg", "/ai.svg", "/gemini.svg"],
       link: "https://best-prompt.streamlit.app",
+      github: "https://github.com/yourusername/promptcraft",
     },
     {
       id: 3,
@@ -113,6 +115,7 @@ export const navItems = [
       img: "/p4.svg",
       iconLists: ["/streamlit.svg", "/python.svg", "/ai.svg", "/openai.svg", "/pandas.svg"],
       link: "https://deep-researc1-1.streamlit.app",
+      github: "https://github.com/yourusername/deep-research-assistant",
     },
     {
       id: 4,
@@ -121,6 +124,7 @@ export const navItems = [
       img: "/codescope-dashboard.svg",
       iconLists: ["/streamlit.svg", "/python.svg", "/ai.svg", "/pandas.svg", "/plotly.svg", "/docker.svg"],
       link: "https://codescope.streamlit.app",
+      github: "https://github.com/yourusername/codescope",
     },
   ];
   

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import MagneticButton from "./MagneticButton";
 
 const ContactForm = () => {
@@ -33,7 +33,6 @@ const ContactForm = () => {
   };
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/aswinguvvala", label: "GitHub" },
     { icon: FaLinkedin, href: "https://www.linkedin.com/in/aswinguvvala", label: "LinkedIn" },
     { icon: FaEnvelope, href: "mailto:aswinabd17@gmail.com", label: "Email" },
   ];
